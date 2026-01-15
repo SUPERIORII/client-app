@@ -1,9 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Notification from "@/components/customUi/Notification";
-import baseUrl from "@/lib/baseUrl";
+import Notification from "@/components/layout/Notification";
+import baseUrl from "@/helpers/baseUrl";
 
 const VerifyInput = ({ email }) => {
   const [isLoaded, setIsLoaded] = useState(false);

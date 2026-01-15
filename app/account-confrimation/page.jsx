@@ -1,4 +1,4 @@
-import { authUser } from "@/lib/getUser";
+import { authUser } from "@/helpers/getUser";
 import { MailCheck } from "lucide-react";
 import { redirect } from "next/navigation";
 import VerifyInput from "./component/VerifyInput";
