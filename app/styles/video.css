@@ -1,0 +1,27 @@
+.video-control-container .controls .control-bg {
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-container.fullscreen {
+  max-width: initial;
+  max-height: 100vh;
+}
+
+/* additional style */
+.timeline-container {
+  margin-inline: 0.5rem;
+  background-color: rgba(197, 189, 197, 0.5);
+  display: flex;
+  width: 90%;
+  flex: 1;
+  height: 6px;
+}
+
+.timeline {
+  height: 6px;
+}
+
+.timeline-container:hover .timeline {
+  height: 100%;
+}
