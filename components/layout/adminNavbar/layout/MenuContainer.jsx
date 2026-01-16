@@ -58,7 +58,7 @@ const MenuContainer = ({ user }) => {
     e.preventDefault();
 
     try {
-      await baseUrl.post("api/auth/logout");
+      await baseUrl.post("/api/auth/logout");
       router.push("/login");
     } catch (error) {
       console.log("Logging user out error:", error);
