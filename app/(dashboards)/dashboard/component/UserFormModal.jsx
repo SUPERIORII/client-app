@@ -74,11 +74,7 @@ export default function UserFormModal() {
 
     setIsSubmitting(true);
     try {
-      const result = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/register`,
-        formData,
-        { withCredentials: true }
-      );
+      const result = await axios.post(`/api/auth/register`, formData);
       const data = result.data;
       if (data.success) {
         router.replace(data.confrimation_url);
