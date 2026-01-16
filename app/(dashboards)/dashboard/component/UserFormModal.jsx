@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Notification from "@/components/layout/Notification";
 import LoadingSpinner from "@/components/layout/LoadingSpinner";
 import { Skeleton } from "@/components/ui/skeleton";
+import baseUrl from "@/helpers/baseUrl";
 
 export default function UserFormModal() {
   const [formData, setFormData] = useState({
@@ -74,8 +75,9 @@ export default function UserFormModal() {
 
     setIsSubmitting(true);
     try {
-      const result = await axios.post(`/api/auth/register`, formData);
-      const data = result.data;
+      const response = await baseUrl.post(`/api/auth/register`, formData);
+
+      const data = response.data;
       if (data.success) {
         router.replace(data.confrimation_url);
       }
