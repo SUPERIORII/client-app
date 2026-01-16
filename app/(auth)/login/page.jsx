@@ -87,18 +87,14 @@ const LoginPage = () => {
 
       // Step 2: Send login request to backend
       // withCredentials: true ensures cookies are sent and received
-      await baseUrl.post(`/api/auth/login`, formData, {
-        withCredentials: true,
-      });
+      await baseUrl.post(`/api/auth/login`, formData);
       // ✅ VERIFY COOKIE EXISTS
-      const isAuthenticated = await baseUrl.get("/api/authenticate/me", {
-        withCredentials: true,
-      });
-
-     
+      const isAuthenticated = await baseUrl.get("/api/authenticate/me");
 
       if (isAuthenticated.data.authenticated) {
-        router.replace("/dashboard");
+        console.log(isAuthenticated.data.authenticated);
+
+        // router.replace("/dashboard");
       }
 
       // The backend sets the authentication cookie automatically
