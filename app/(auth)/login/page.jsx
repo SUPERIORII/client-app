@@ -101,7 +101,7 @@ const LoginPage = () => {
       // Step 3: Handle successful response
     } catch (error) {
       // Step 4: Handle login failure
-      console.error("Login error:", error.response?.data);
+      console.error("Login error:", error.response.message);
 
       // Show error message from server or generic message
       const errorMessage =
