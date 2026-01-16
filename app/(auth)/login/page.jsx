@@ -92,9 +92,7 @@ const LoginPage = () => {
       const isAuthenticated = await baseUrl.get("/api/authenticate/me");
 
       if (isAuthenticated.data.authenticated) {
-        console.log(isAuthenticated.data.authenticated);
-
-        // router.replace("/dashboard");
+        router.replace("/dashboard");
       }
 
       // The backend sets the authentication cookie automatically
